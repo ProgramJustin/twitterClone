@@ -5,3 +5,7 @@ const app = express();
 
 // what port to listen to, if process.env.PORT is undefined then choose port 3000
 const PORT = process.env.PORT || 3000;
+
+
+// add middlewear inside app
+app.use(bodyParser.json());
