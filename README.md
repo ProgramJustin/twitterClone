@@ -30,6 +30,8 @@
 4. TYPE: npm install
 5. TYPE: npm install --save express
 6. TYPE: npm install --save bodyParser
+7. TYPE: npm install --save cross-env
+
 
 
 * Copyright (c) 2017, **_{Justin Gomez}_**
