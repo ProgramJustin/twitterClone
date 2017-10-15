@@ -29,8 +29,11 @@
 3. cd INTO THE FOLDER "twitterClone"
 4. TYPE: npm install
 5. TYPE: npm install --save express
-6. TYPE: npm install --save bodyParser
+6. TYPE: npm install --save body-parser
 7. TYPE: npm install --save cross-env
+8. TYPE: npm install --save-dev babel-plugin-transform-object-rest-spread
+9. TYPE: npm install --save-dev babel-cli
+10. TYPE: npm install --save-dev babel-preset-env
 
 
 
