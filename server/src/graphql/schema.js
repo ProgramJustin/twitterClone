@@ -2,7 +2,11 @@
 
 // Query is about getting data, mutation is about everythinng else
 
+// type Status helps front end understand status
 export default `
+type Status {
+  message: String!
+}
 type Tweet {
   _id: ID!
   text: String!
@@ -16,6 +20,7 @@ type Query {
 type Mutation {
   createTweet(text: String!): Tweet
   updateTweet(_id: ID!, text: String): Tweet
+  deleteTweet(_id: ID!): Status
 }
 
 schema {
