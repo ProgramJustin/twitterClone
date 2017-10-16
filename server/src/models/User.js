@@ -11,4 +11,5 @@ const UserSchema = new Schema({
   password: String,
   email: String
 }, { timestamps: true});
+
 export default mongoose.model('User', UserSchema);

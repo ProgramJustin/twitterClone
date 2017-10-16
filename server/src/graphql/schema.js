@@ -9,6 +9,17 @@ scalar Date
 type Status {
   message: String!
 }
+
+typ User {
+  _id: ID!
+  username: String
+  email: String!
+  firstName: String
+  lastName: String
+  avatar: String
+  createdAt: Date!
+  updatedAt: Date!
+}
 type Tweet {
   _id: ID!
   text: String!
