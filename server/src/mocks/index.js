@@ -8,11 +8,9 @@ export default async () => {
   try {
     await Tweet.remove();
 
-    await Array.from({ length: TWEETS_TOTAL }).forEach(async () => 
-      await Tweet.create({ text: faker.lorem.paragraphs(1) }),
-
+    await Array.from({ length: TWEETS_TOTAL }).forEach(
+      async () => await Tweet.create({ text: faker.lorem.paragraphs(1) }),
     );
-
   } catch (error) {
     throw error;
   }
