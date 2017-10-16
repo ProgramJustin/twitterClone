@@ -2,11 +2,12 @@
 
 export default `
 type Tweet {
-  _id: ID
-  text: String
+  _id: ID!
+  text: String!
 }
 
-type Query(_id: ID!) {
+type Query {
+ getTweet(_id: ID!): Tweet
  getTweets: [Tweet]
 }
 
@@ -16,3 +17,4 @@ schema {
 `;
 // the underscore in _id is very important
 // getTweets: gets all the tweets, a list of tweets
+// String! says it must have a s
