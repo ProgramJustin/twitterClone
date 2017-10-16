@@ -10,6 +10,8 @@ type Status {
 type Tweet {
   _id: ID!
   text: String!
+  createdAt: String!
+  updatedAt: String!
 }
 
 type Query {
