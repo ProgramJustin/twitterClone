@@ -1,5 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+// import db
+import './config/db';
 // create instance of express server
 const app = express();
 

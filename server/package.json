@@ -9,15 +9,20 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.0"
-  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "cross-env": "^5.0.5",
     "express": "^4.16.2",
-    "nodemon": "^1.12.1"
+    "mongoose": "^4.12.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.9.0",
+    "eslint-config-equimper": "^2.2.1",
+    "eslint-config-prettier": "^2.6.0",
+    "nodemon": "^1.12.1",
+    "prettier": "^1.7.4"
   }
 }
