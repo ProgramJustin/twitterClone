@@ -5,7 +5,7 @@ export default {
   // _, { _id }) => Tweet.findById(_id) instead of findById(args.id), _id variable is created and is stored as Tweet.findById(_id)
   // find({}) finds everythings
   getTweet: (_, { _id }) => Tweet.findById(_id),
-  getTweets: () => Tweet.find({}).sort({ createdAt: -1}),
+  getTweets: () => Tweet.find({}).sort({ createdAt: -1 }),
   createTweet: (_, args) => Tweet.create(args),
   updateTweet: (_, { _id, ...rest }) =>
     Tweet.findByIdAndUpdate(_id, rest, { new: true }),
