@@ -19,6 +19,7 @@ type Mutation {
 
 schema {
   query: Query
+  mutation: Mutation
 }
 `;
 // the underscore in _id is very important

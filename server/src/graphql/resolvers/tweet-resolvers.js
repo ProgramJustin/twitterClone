@@ -6,4 +6,5 @@ export default {
   // find({}) finds everythings
   getTweet: (_, { _id }) => Tweet.findById(_id),
   getTweets: () => Tweet.find({}),
+  createTweet: (_, args) => Tweet.create(args),
 };
