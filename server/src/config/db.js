@@ -1,4 +1,5 @@
-/* eslint0disable no-console */
+/* eslint-disable no-console */
+
 // see process in db
 import mongoose from 'mongoose';
 // import mongodb from constants

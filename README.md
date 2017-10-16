@@ -35,7 +35,7 @@
 9. TYPE: npm install --save-dev babel-cli
 10. TYPE: npm install --save-dev babel-preset-env
 11. TYPE: npm install --save-dev eslint eslint-config-equimper prettier eslint-config-prettier
-12. TYPE: npm install --save apollo-server-express graphql-tools
+12. TYPE: npm install --save apollo-server-express  graphql graphql-tools
 
 
 
