@@ -4,14 +4,16 @@
 
 // type Status helps front end understand status
 export default `
+scalar Date
+
 type Status {
   message: String!
 }
 type Tweet {
   _id: ID!
   text: String!
-  createdAt: String!
-  updatedAt: String!
+  createdAt: Date!
+  updatedAt: Date!
 }
 
 type Query {
