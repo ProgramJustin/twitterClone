@@ -30,6 +30,7 @@ type Tweet {
 type Query {
  getTweet(_id: ID!): Tweet
  getTweets: [Tweet]
+ getUser(_id: ID!): User
  getUsers: [User]
 }
 

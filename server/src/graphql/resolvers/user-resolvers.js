@@ -10,5 +10,6 @@ export default {
     const [firstName, ...lastName] = fullName.split(' ');
     return User.create({ firstName, lastName, ...rest });
   },
+  getUser: (_, { _id }) => User.findById(_id),
   getUsers: () => User.find({}).sort({ createdAt: -1 }),
 };
