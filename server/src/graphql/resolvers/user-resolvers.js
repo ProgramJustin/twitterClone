@@ -8,6 +8,7 @@ export default {
   // or
   signup: (_, { fullName, ...rest }) => {
     const [firstName, ...lastName] = fullName.split(' ');
-    return User.create({ firstName, lastName, ...rest})
-  }
-}
+    return User.create({ firstName, lastName, ...rest });
+  },
+  getUsers: () => User.find({}).sort({ createdAt: -1 }),
+};

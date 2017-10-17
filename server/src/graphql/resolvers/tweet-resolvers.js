@@ -1,4 +1,5 @@
 import Tweet from '../../models/Tweet';
+
 // a resolver is a function that returns your data
 export default {
   // findById is method from mongoose
