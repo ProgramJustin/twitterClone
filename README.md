@@ -38,6 +38,7 @@
 12. TYPE: npm install --save apollo-server-express  graphql graphql-tools
 13. TYPE: npm install faker
 14. TYPE: npm install graphql-date
+15. TYPE: npm install bcrypt-nodejs
 
 
 

@@ -1,4 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
+import { hashSync } from 'bcrypt-nodejs';
 
 const UserSchema = new Schema(
   {
@@ -14,5 +15,21 @@ const UserSchema = new Schema(
   },
   { timestamps: true },
 );
+// pre hook, before scheme (before user has been saved), crypt the password
+// this happens when updating password, or siging up
+UserSchema.pre('save', function(next) {
+  if (this.isModified('password')) {
+    this.password = this._hashPassword(this.password)
+    return next();
+  }
+  return next();
+});
+
+// instance of the user schema hashing the password
+UserSchema.methods = {
+  _hashPassword(password) {
+    return hashSync(password);
+  }
+}
 
 export default mongoose.model('User', UserSchema);
