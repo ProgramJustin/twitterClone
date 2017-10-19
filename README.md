@@ -37,8 +37,13 @@
 11. TYPE: npm install --save-dev eslint eslint-config-equimper prettier eslint-config-prettier
 12. TYPE: npm install --save apollo-server-express  graphql graphql-tools
 13. TYPE: npm install faker
+  * Generate dummy data
 14. TYPE: npm install graphql-date
+  * generate a clean date to read on the fly
 15. TYPE: npm install bcrypt-nodejs
+  *  This encrypts your passwords
+16. TYPE: npm install jsonwebtoken
+  * This is a json webtoken generator
 
 
 
