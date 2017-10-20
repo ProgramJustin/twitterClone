@@ -1,4 +1,5 @@
 import User from '../../models/User';
+// import { requireAuth } from '../../services/auth';
 
 export default {
   // signup: (_, { email, avatar, password, username, fullName }) => {
@@ -10,8 +11,8 @@ export default {
     const [firstName, ...lastName] = fullName.split(' ');
     const user = await User.create({ firstName, lastName, ...rest });
     return {
-      token: user.createToken()
-    }
+      token: user.createToken(),
+    };
   },
   getUser: (_, { _id }) => User.findById(_id),
   getUsers: () => User.find({}).sort({ createdAt: -1 }),
@@ -24,8 +25,8 @@ export default {
       throw new Error('User does not exist!');
     }
     if (!user.authenticateUser(password)) {
-      throw new Error('password does not match')
+      throw new Error('password does not match');
     }
     return user;
-  }
-}
+  },
+};

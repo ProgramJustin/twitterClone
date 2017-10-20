@@ -38,12 +38,12 @@ UserSchema.methods = {
   createToken() {
     return jwt.sign(
       {
-        _id: this.id
+        _id: this.id,
       },
       // password for the token, this will not expire
-      constants.JWT_SECRET
-    )
-  }
-}
+      constants.JWT_SECRET,
+    );
+  },
+};
 
 export default mongoose.model('User', UserSchema);
