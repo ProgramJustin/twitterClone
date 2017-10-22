@@ -7,7 +7,7 @@ export default {
   // findById is method from mongoose
   // _, { _id }) => Tweet.findById(_id) instead of findById(args.id), _id variable is created and is stored as Tweet.findById(_id)
   // find({}) finds everythings
-  getTweet: async (_, { user }) =>  {
+  getTweet: async (_, { user }) => {
     try {
       await requireAuth(user);
       return Tweet.findById;
@@ -19,7 +19,7 @@ export default {
   getTweets: async (_, args, { user }) => {
     try {
       await requireAuth(user);
-      return Tweet.find({}).sort({ createdAt: -1 })
+      return Tweet.find({}).sort({ createdAt: -1 });
     } catch (error) {
       throw error;
     }
@@ -34,12 +34,12 @@ export default {
   },
   updateTweet: async (_, { _id, ...rest }, { user }) => {
     try {
-    await requireAuth(user)
-    return Tweet.findByIdAndUpdate(_id, rest, { new: true });
-  } catch (error) {
-    throw error
-  }
-},
+      await requireAuth(user);
+      return Tweet.findByIdAndUpdate(_id, rest, { new: true });
+    } catch (error) {
+      throw error;
+    }
+  },
 
   deleteTweet: async (_, { _id }, { user }) => {
     try {

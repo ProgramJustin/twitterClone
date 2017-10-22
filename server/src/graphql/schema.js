@@ -24,6 +24,16 @@ type User {
   createdAt: Date!
   updatedAt: Date!
 }
+type Me {
+  _id: ID!
+  username: String
+  email: String!
+  firstName: String
+  lastName: String
+  avatar: String
+  createdAt: Date!
+  updatedAt: Date!
+}
 type Tweet {
   _id: ID!
   text: String!
@@ -36,6 +46,7 @@ type Query {
  getTweets: [Tweet]
  getUser(_id: ID!): User
  getUsers: [User]
+ me: Me
 }
 
 type Mutation {
@@ -43,7 +54,7 @@ type Mutation {
   updateTweet(_id: ID!, text: String): Tweet
   deleteTweet(_id: ID!): Status
   signup(email: String!, fullName: String!, password: String!, avatar: String, username: String): Auth
-  login(email: String!, password: String!): User
+  login(email: String!, password: String!): Auth
 }
 
 schema {
