@@ -1,9 +1,15 @@
 import GraphQLDate from 'graphql-date';
 import TweetResolvers from './tweet-resolvers';
 import UserResolvers from './user-resolvers';
+import User from '../../models/User';
 // query the database to extract tweets
 export default {
   Date: GraphQLDate,
+  Tweet: {
+    user: ({ user }) => User.findById(user),
+
+
+  },
   Query: {
     getTweet: TweetResolvers.getTweet,
     getTweets: TweetResolvers.getTweets,

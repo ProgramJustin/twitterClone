@@ -27,7 +27,8 @@ export default {
   createTweet: async (_, args, { user }) => {
     try {
       await requireAuth(user);
-      return Tweet.create(args);
+      // ... args: spread everyting from the object args, if not you will have an object inside another object
+      return Tweet.create({ ...args, user: user._id});
     } catch (error) {
       throw error;
     }
