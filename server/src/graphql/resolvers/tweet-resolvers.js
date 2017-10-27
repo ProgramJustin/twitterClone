@@ -55,7 +55,12 @@ export default {
   deleteTweet: async (_, { _id }, { user }) => {
     try {
       await requireAuth(user);
-      await Tweet.findByIdAndRemove(_id);
+      const tweet = await Tweet.findOne({ _id, user: user._id });
+
+      if(!tweet) {
+        throw new Error('Not Found');
+      }
+      await tweet.remove();
       return {
         message: 'Delete Success!',
       };
